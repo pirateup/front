@@ -29,11 +29,22 @@ module.exports = {
       'js': 'never',
       'vue': 'never'
     }],
+    "semi": ["error", "always"],
+    "eol-last": ["error", "always"],
+    'arrow-parens': 0,
+    'generator-star-spacing': 0,
+    "indent": ["error", 4],
+    "no-unused-vars": [1],
+    "no-trailing-spaces": [1],
+    'brace-style': ["error", "allman", { "allowSingleLine": true }],
+    "space-before-function-paren": ["error","always"],
+    "no-param-reassign": ["error", { "props": false }],
     // allow optionalDependencies
     'import/no-extraneous-dependencies': ['error', {
       'optionalDependencies': ['test/unit/index.js']
     }],
+    "import/imports-first": [0],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   }
-}
+};
