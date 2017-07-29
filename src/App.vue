@@ -25,8 +25,8 @@ export default {
         }
         else
         {
-            // setting to central London 
-            Store.dispatch('setLocation', { latitude: 52, longtude: 51.52, longitude: -0.12 });
+            // setting to central London
+            Store.dispatch('setLocation', { latitude: 52, longitude: -0.12 });
         }
     },
 };

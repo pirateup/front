@@ -1,4 +1,4 @@
 export default
 {
-    location: [11, 11],
+    location: [52.23, 21.02],
 };
