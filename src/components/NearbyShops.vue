@@ -1,6 +1,6 @@
 <template>
     <div class="shops-list">
-        <article class="shop" v-for="shop in shops">
+        <article class="shop" v-for="shop in nearbyShops">
             <img :src="shop.img" class="shop__img" />
             <span class="shop__name">{{ shop.name }}</span>
             <span class="shop__distance">{{ shop.distance }}</span>
@@ -14,16 +14,12 @@
 export default
 {
     name: 'hello',
-    data ()
+    computed:
     {
-        return {
-            // Array is expected to be sorted by distance, asc
-            shops:
-            [
-                { name: 'U Jadźki', distance: 300, street: 'Ketonowa 7', img: 'https://s-media-cache-ak0.pinimg.com/736x/a3/03/61/a30361985814a564e8b87515bb373661--shop-facade-coffeeshops.jpg' },
-                { name: 'U Józka', distance: 500, street: 'Betonowa 9', img: 'https://s-media-cache-ak0.pinimg.com/736x/a3/03/61/a30361985814a564e8b87515bb373661--shop-facade-coffeeshops.jpg' },
-            ],
-        };
+        nearbyShops ()
+        {
+            return this.$store.getters.nearbyShops;
+        },
     },
 };
 </script>
