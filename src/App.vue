@@ -8,8 +8,10 @@
     <router-view></router-view>
   </div>
 </template>
-
+<script defer type='text/javascript' src='http://maps.googleapis.com/maps/api/js?key=AIzaSyBlUfxiOjIHmsxQA_nnx1d-daSuSri6BeI'></script>
 <script>
+import Store from './store/store';
+
 export default {
     name: 'app',
     created: () =>
@@ -18,8 +20,13 @@ export default {
         {
             navigator.geolocation.getCurrentPosition(position =>
             {
-                alert(position.coords.latitude);
+                Store.dispatch('setLocation', position.coords);
             });
+        }
+        else
+        {
+            // setting to central London 
+            Store.dispatch('setLocation', { latitude: 52, longtude: 51.52, longitude: -0.12 });
         }
     },
 };
