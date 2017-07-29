@@ -1,6 +1,6 @@
 export default
 {
-    // choiceMade (context, {prop, value, step})
+    // choiceMade (context, { prop, value, step })
     // {
     //     context.commit({
     //         type: 'updateWindowModel',
@@ -16,4 +16,11 @@ export default
     //         });
     //     }
     // },
+    setUserLocation (context, { value })
+    {
+        context.commit({
+            type: 'setLocation',
+            value,
+        });
+    },
 };
