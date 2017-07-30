@@ -15,6 +15,7 @@ export default {
     name: 'app',
     created: () =>
     {
+
         if (navigator.geolocation)
         {
             navigator.geolocation.getCurrentPosition(position =>
@@ -28,8 +29,8 @@ export default {
             Store.dispatch('setLocation', { latitude: 52, longitude: -0.12 });
         }
     },
-};
 </script>
 
 <style>
+
 </style>
