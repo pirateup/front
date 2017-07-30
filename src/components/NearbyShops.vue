@@ -5,7 +5,7 @@
            <span class="shop__name">{{ shop.name }}</span>
            <span class="shop__distance">{{ shop.distance }}</span>
            <address class="shop__address">{{ shop.street }}</address>
-           <!-- Link to navigation -->
+           <router-link to="/shop-on-map">View on map</router-link>
        </article>
    </div>
 </template>
