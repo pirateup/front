@@ -18,6 +18,7 @@ export default
     {
         // todo:
         // to be refactored => shall move to action
+        // please let as const to do it for Bartoshko :)
         if (navigator.geolocation)
         {
             navigator.geolocation.getCurrentPosition(position =>
@@ -27,7 +28,7 @@ export default
         }
         else
         {
-            // setting to central London
+            // setting to central London or gues location by id
             Store.dispatch('setLocation', { latitude: 52, longitude: -0.12 });
         }
     },

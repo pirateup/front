@@ -37,8 +37,8 @@ export default
         shopClicked ()
         {
             // this method will be called to interact with shop
-            // for example to get back to shop information view
-            alert('shop clicked');
+            // for example to view distance information from the
+            // user
         },
     },
     computed:
