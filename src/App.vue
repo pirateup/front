@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <ul>
+        <li><router-link to="/">Homepage</router-link></li>
+        <li><router-link to="/nearby-shops">Nearby shops</router-link></li>
+    </ul>
     <router-view></router-view>
   </div>
 </template>
@@ -19,5 +23,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+li
+{
+    display: inline-block;
 }
 </style>

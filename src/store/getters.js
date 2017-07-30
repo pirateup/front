@@ -1,7 +1,7 @@
 export default
 {
-    // step (state)
-    // {
-    //     return state.step;
-    // },
+    nearbyShops (state)
+    {
+        return state.nearbyShops;
+    },
 };
