@@ -8,7 +8,6 @@
     <router-view></router-view>
   </div>
 </template>
-<script defer type='text/javascript' src='http://maps.googleapis.com/maps/api/js?key=AIzaSyBlUfxiOjIHmsxQA_nnx1d-daSuSri6BeI'></script>
 <script>
 import Store from './store/store';
 
