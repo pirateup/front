@@ -21,7 +21,7 @@ export default new Router({
             component: NearbyShops,
         },
         {
-            path: '/shop-on-map',
+            path: '/shop-on-map/:id',
             name: 'shopOnMap',
             component: ShopOnMap,
         },

@@ -8,4 +8,8 @@ export default
     {
         return state.location;
     },
+    zoom (state)
+    {
+        return state.zoom;
+    },
 };

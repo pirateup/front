@@ -1,20 +1,21 @@
 <template>
     <div class="columns">
-        <h3 v-if='location' >User location coords:  {{location[0]}} {{location[1]}} </h3>
+        <h3 v-if='location' >User location coords:  {{location[0]}} {{location[1]}}</h3>
         <gmap-map
-            :center='center'
+            :center='shopCoords'
             :zoom='zoom'
             class='map_shop'
         >
             <gmap-marker
-                :key='123'
-                :position='shop'
-                :clickable='true'
-                :draggable='false'
+                :key=''
+                :position='shopCoords'
+                :clickable=true
+                :draggable=false
                 @click='shopClicked'
             >
             </gmap-marker>
         </gmap-map>
+        <div></div>
     </div>
 </template>
 
@@ -47,20 +48,22 @@ export default
             // dislays user location at this moment
             return this.$store.getters.location;
         },
-        center ()
-        {
-            // will get store location now takes user location
-            return { lat: this.$store.getters.location[0], lng: this.$store.getters.location[1] };
-        },
         zoom ()
         {
-            // will get data from this.&store.getters.zoom
-            return 14;
+            return this.$store.getters.zoom;
         },
-        shop ()
+        shopCoords ()
         {
-            // will get data from this.$store.getters.store
-            return { lat: this.$store.getters.location[0], lng: this.$store.getters.location[1] };
+            return {
+                lat: this.$store.getters.nearbyShops
+                .find(shop =>
+                    shop.id === this.$route.params.id)
+                .location[0],
+                lng: this.$store.getters.nearbyShops
+                .find(shop =>
+                    shop.id === this.$route.params.id)
+                .location[1],
+            };
         },
     },
 };
