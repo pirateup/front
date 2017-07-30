@@ -4,4 +4,8 @@ export default
     {
         return state.nearbyShops;
     },
+    location (state)
+    {
+        return state.location;
+    },
 };

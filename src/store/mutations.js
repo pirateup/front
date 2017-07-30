@@ -4,4 +4,8 @@ export default
     // {
     //     state.price = price;
     // },
+    setLocation (state, { value })
+    {
+        state.location = [value.latitude, value.longitude];
+    },
 };

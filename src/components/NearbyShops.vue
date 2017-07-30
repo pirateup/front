@@ -1,12 +1,6 @@
 <template>
-    <div class="shops-list">
-        <article class="shop" v-for="shop in nearbyShops">
-            <img :src="shop.img" class="shop__img" />
-            <span class="shop__name">{{ shop.name }}</span>
-            <span class="shop__distance">{{ shop.distance }}</span>
-            <address class="shop__address">{{ shop.street }}</address>
-            <!-- Link to navigation -->
-        </article>
+  <div class="columns shops-list">
+        <h3 v-if='location' >User location coords:  {{location[0]}} {{location[1]}} </h3>
     </div>
 </template>
 
@@ -16,9 +10,9 @@ export default
     name: 'nearby-shops',
     computed:
     {
-        nearbyShops ()
+        location ()
         {
-            return this.$store.getters.nearbyShops;
+            return this.$store.getters.location;
         },
     },
 };
