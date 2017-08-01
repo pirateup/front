@@ -1,6 +1,7 @@
 <template>
     <div class="columns">
-        <h3 v-if='location' >User location coords:  {{location[0]}} {{location[1]}}</h3>
+        <h3 v-if='lat' >User location coords: lat:{{lat}} lng:{{lng}}</h3>
+        <div></div>
         <gmap-map
             :center='shopCoords'
             :zoom='zoom'
@@ -15,20 +16,10 @@
             >
             </gmap-marker>
         </gmap-map>
-        <div></div>
     </div>
 </template>
 
 <script>
-import * as VueGoogleMaps from 'vue2-google-maps';
-import Vue from 'vue';
-
-Vue.use(VueGoogleMaps, {
-    load: {
-        key: 'AIzaSyB-c3v8sMxEM5nDACJKUFBH4p_Up8eaFUs',
-    },
-});
-
 export default
 {
     name: 'shopOnMap',
@@ -43,10 +34,13 @@ export default
     },
     computed:
     {
-        location ()
+        lat ()
         {
-            // dislays user location at this moment
-            return this.$store.getters.location;
+            return this.$store.getters.location[0];
+        },
+        lng ()
+        {
+            return this.$store.getters.location[1];
         },
         zoom ()
         {
@@ -54,16 +48,7 @@ export default
         },
         shopCoords ()
         {
-            return {
-                lat: this.$store.getters.nearbyShops
-                .find(shop =>
-                    shop.id === this.$route.params.id)
-                .location[0],
-                lng: this.$store.getters.nearbyShops
-                .find(shop =>
-                    shop.id === this.$route.params.id)
-                .location[1],
-            };
+            return this.$store.getters.shopCoords(this.$route.params.id);
         },
     },
 };
@@ -74,9 +59,7 @@ export default
     position: absolute;
     display: box;
     margin: 0 auto;
-    width: 80%;
+    width: 98%;
     height: 80%;
-    max-height: 600px;
-    max-width: 600px;
 }
 </style>
