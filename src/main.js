@@ -8,10 +8,13 @@ import router from './router';
 Vue.use(VueGoogleMaps, {
     load: {
         key: process.env.API_KEY,
+        libraries: 'places',
     },
 });
 
 Vue.config.productionTip = false;
+
+console.log(VueGoogleMaps);
 
 /* eslint-disable no-new */
 new Vue({

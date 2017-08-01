@@ -13,4 +13,5 @@ export default
     // both on the map, or if user is searching from unknown or
     // far location zoom will be set to comfortably view the Map
     zoom: 15,
+    searchLocationFieldVisib: false,
 };

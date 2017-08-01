@@ -26,4 +26,8 @@ export default
     {
         return state.zoom;
     },
+    searchLocationFieldVisib (state)
+    {
+        return state.searchLocationFieldVisib;
+    },
 };
