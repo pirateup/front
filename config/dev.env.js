@@ -3,5 +3,7 @@ var prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  API_KEY: '"AIzaSyAf7fXslha_uCeyFFGp2ub2BGxa9OsQphM"'
+  // new key specialy for this app
+  // dev mode
+  API_KEY: '"AIzaSyB9BRkAITRcGLumUQsMyDHMk98_HaR0-q8"'
 })
