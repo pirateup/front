@@ -22,6 +22,10 @@ export default
         ({ lat: state.nearbyShops.find(shop => shop.id === id).location[0],
             lng: state.nearbyShops.find(shop => shop.id === id).location[1] });
     },
+    userLocation (state)
+    {
+        return { lat: state.location[0], lng: state.location[1] };
+    },
     zoom (state)
     {
         return state.zoom;

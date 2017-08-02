@@ -4,6 +4,8 @@ const calculateMiddleformCoords = locationSection =>
     // google place location is:
     // locationSection:
     // {f: {b: 'lng', f: 'lat'}, b: {b: 'lng', f: 'lat'}}
+    // and returns exact location point as object:
+    // { latitude: lat, longitude: lng }
     const lat = (locationSection.f.b + locationSection.f.f) / 2;
     const lng = (locationSection.b.b + locationSection.b.f) / 2;
     return { latitude: lat, longitude: lng };

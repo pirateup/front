@@ -1,17 +1,20 @@
 <template>
   <div id="app" class='container' >
-    <img src="./assets/logo.png">
     <div>
         <img src='./assets/search.png' v-on:click='setSearchLocatonFieldVisibility'/>
         <div v-if='searchLocationFieldVisib'>
             <AutocompleteLocation />
         </div>
     </div>
+    <div>
+        <img src="./assets/logo.png">
+    </div>
     <ul>
-        <p>{{location}}</p>
         <li><router-link to="/">Homepage</router-link></li>
+        <li><router-link to="/map">Show Map</router-link></li>
         <li><router-link to="/nearby-shops">Nearby shops</router-link></li>
     </ul>
+    <div>Your coords: {{location}}</div>
     <router-view></router-view>
   </div>
 </template>
@@ -66,10 +69,10 @@ img {
     position: relative;
     width: 60px;
     height: 60px;
-    display: inline;
     cursor: pointer;
 }
 input {
     float: left;
+    display: inline;
 }
 </style>

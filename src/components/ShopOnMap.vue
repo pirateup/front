@@ -22,7 +22,7 @@
 <script>
 export default
 {
-    name: 'shopOnMap',
+    name: 'shop-on-map',
     methods:
     {
         shopClicked ()
