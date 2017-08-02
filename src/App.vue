@@ -8,6 +8,7 @@
         </div>
     </div>
     <ul>
+        <p>{{location}}</p>
         <li><router-link to="/">Homepage</router-link></li>
         <li><router-link to="/nearby-shops">Nearby shops</router-link></li>
     </ul>
@@ -44,6 +45,10 @@ export default
         searchLocationFieldVisib ()
         {
             return this.$store.getters.searchLocationFieldVisib;
+        },
+        location ()
+        {
+            return this.$store.getters.location;
         },
     },
     methods:

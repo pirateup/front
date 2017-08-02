@@ -1,3 +1,6 @@
+// import utility functions
+import calculateMiddleformCoords from '../utility/calculateMiddleformCoords';
+
 export default
 {
     setLocation (context, value)
@@ -10,5 +13,13 @@ export default
     setSearchLocatonFieldVisibility (context)
     {
         context.commit('setSearchLocatonFieldVisibility');
+    },
+    placeChange (context, location)
+    {
+        const value = calculateMiddleformCoords(location);
+        context.commit({
+            type: 'setLocation',
+            value,
+        });
     },
 };

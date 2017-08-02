@@ -14,8 +14,6 @@ Vue.use(VueGoogleMaps, {
 
 Vue.config.productionTip = false;
 
-console.log(VueGoogleMaps);
-
 /* eslint-disable no-new */
 new Vue({
     el: '#app',

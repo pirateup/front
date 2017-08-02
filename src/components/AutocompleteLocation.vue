@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import Store from '../store/store';
+
 export default
 {
     name: 'autocomplete-location',
@@ -16,9 +18,11 @@ export default
     {
         placeChange (e)
         {
-            console.log(e);
-            console.dir(e.geometry.viewport.b);
-            console.dir(e.geometry.viewport.f);
+            if (e.geometry.viewport)
+            {
+                const location = e.geometry.viewport;
+                Store.dispatch('placeChange', location);
+            }
         },
     },
     computed:
