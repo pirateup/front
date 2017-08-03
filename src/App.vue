@@ -39,7 +39,7 @@ export default
         }
         else
         {
-            // setting to central London or gues location by id
+            // setting to central London
             Store.dispatch('setLocation', { latitude: 52, longitude: -0.12 });
         }
     },
