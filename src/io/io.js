@@ -17,7 +17,6 @@ const HTTP = axios.create({
 /* eslint-disable */
 export function requestNearbyShops (location)
 {
-    // use location to build request query
-    return HTTP.get(`nearby-shops`)
+    return HTTP.get(`nearby?latitude=${location.latitude}&longitude=${location.longitude}`)
     .then(response => response.data);
 }

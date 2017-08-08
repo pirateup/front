@@ -13,7 +13,7 @@ export default
     updateNearbyShops (context)
     {
         // extract current location from context
-        io.requestNearbyShops('a')
+        io.requestNearbyShops({ latitude: 10.2, longitude: 20.1 })
         .then(shops =>
         {
             context.commit({
