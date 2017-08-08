@@ -1,8 +1,9 @@
 export default
 {
-    setLocation (state, { value })
+    setLocation (state, { location: { latitude, longitude } })
     {
-        state.location = [value.latitude, value.longitude];
+        // Parameter destructing in order to allow raw output from geolocatin API
+        state.location = { latitude, longitude };
     },
     updateNearbyShops (state, { shops })
     {

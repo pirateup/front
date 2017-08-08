@@ -2,18 +2,18 @@ import * as io from '@/io/io';
 
 export default
 {
-    setLocation (context, value)
+    setLocation (context, location)
     {
+        console.log(location);
         context.commit({
             type: 'setLocation',
-            value,
+            location,
         });
     },
     // This should be triggered by something
     updateNearbyShops (context)
     {
-        // extract current location from context
-        io.requestNearbyShops({ latitude: 10.2, longitude: 20.1 })
+        io.requestNearbyShops(context.getters.location)
         .then(shops =>
         {
             context.commit({
