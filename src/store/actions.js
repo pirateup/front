@@ -4,7 +4,6 @@ export default
 {
     setLocation (context, location)
     {
-        console.log(location);
         context.commit({
             type: 'setLocation',
             location,
