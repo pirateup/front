@@ -1,12 +1,13 @@
 <template>
     <div class="shops-list">
-       <article class="shop" v-for="shop in nearbyShops">
+        <button v-on:click="test()">Test io action</button>
+        <article class="shop" v-for="shop in nearbyShops">
            <img :src="shop.img" class="shop__img" />
            <span class="shop__name">{{ shop.name }}</span>
            <span class="shop__distance">{{ shop.distance }}</span>
            <address class="shop__address">{{ shop.street }}</address>
            <!-- Link to navigation -->
-       </article>
+        </article>
    </div>
 </template>
 
@@ -23,6 +24,13 @@ export default
         nearbyShops ()
         {
             return this.$store.getters.nearbyShops;
+        },
+    },
+    methods:
+    {
+        test ()
+        {
+            this.$store.dispatch('updateNearbyShops');
         },
     },
 };

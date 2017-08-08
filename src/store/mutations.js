@@ -4,4 +4,8 @@ export default
     {
         state.location = [value.latitude, value.longitude];
     },
+    updateNearbyShops (state, { shops })
+    {
+        state.nearbyShops = shops;
+    },
 };

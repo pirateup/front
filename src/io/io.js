@@ -13,12 +13,11 @@ const HTTP = axios.create({
     headers: {},
 });
 
-HTTP.get('posts').then(response => { console.log(response.data); });
-
 // Remove this and below line after adding another function to the io
 /* eslint-disable */
-export function requestNearbyShops ()
+export function requestNearbyShops (location)
 {
-    return HTTP.get('nearby-shops')
+    // use location to build request query
+    return HTTP.get(`nearby-shops`)
     .then(response => response.data);
 }

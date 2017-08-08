@@ -9,4 +9,17 @@ export default
             value,
         });
     },
+    // This should be triggered by something
+    updateNearbyShops (context)
+    {
+        // extract current location from context
+        io.requestNearbyShops('a')
+        .then(shops =>
+        {
+            context.commit({
+                type: 'updateNearbyShops',
+                shops,
+            });
+        });
+    },
 };
