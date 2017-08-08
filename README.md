@@ -18,4 +18,22 @@ npm run build
 npm run build --report
 ```
 
+## Backend connection
+
+### Mock (Dev)
+
+```
+    npm run mock-back
+```
+
+All mocked data are contained in ```./config/back-mock.json```. Mock server runs on :3000
+
+### Dev
+
+Specified as envariomental variable in ```./config/dev.env.js```
+
+### Production
+
+Specified as envariomental variable in ```./config/prod.env.js```
+
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

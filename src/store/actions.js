@@ -1,3 +1,5 @@
+import * as io from '@/io/io';
+
 export default
 {
     setLocation (context, value)
