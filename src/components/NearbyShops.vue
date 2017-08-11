@@ -1,6 +1,5 @@
 <template>
     <div class="shops-list">
-        <button v-on:click="test()">Test io action</button>
         <article class="shop" v-for="shop in nearbyShops">
            <img :src="shop.img" class="shop__img" />
            <span class="shop__name">{{ shop.name }}</span>
@@ -28,10 +27,7 @@ export default
     },
     methods:
     {
-        test ()
-        {
-            this.$store.dispatch('updateNearbyShops');
-        },
+
     },
 };
 </script>
