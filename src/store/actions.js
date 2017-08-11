@@ -8,10 +8,13 @@ export default
             type: 'setLocation',
             location,
         });
+
+        // With every location change nearby shops may changed
+        context.dispatch('updateNearbyShops');
     },
-    // This should be triggered by something
     updateNearbyShops (context)
     {
+        // TODO: Some kind of guard to prevent sending a request every second
         io.requestNearbyShops(context.getters.location)
         .then(shops =>
         {
