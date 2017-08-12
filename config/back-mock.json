@@ -1,0 +1,6 @@
+{
+  "nearby": [
+    { "name": "Sklep testowy", "distance": 100, "street": "Testowa 3", "img": "https://s-media-cache-ak0.pinimg.com/736x/a3/03/61/a30361985814a564e8b87515bb373661--shop-facade-coffeeshops.jpg" },
+    { "name": "Sklep bestowy", "distance": 200, "street": "Bestowa 1", "img": "https://s-media-cache-ak0.pinimg.com/736x/a3/03/61/a30361985814a564e8b87515bb373661--shop-facade-coffeeshops.jpg" }
+  ]
+}

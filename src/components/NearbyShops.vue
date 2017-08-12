@@ -1,12 +1,12 @@
 <template>
     <div class="shops-list">
-       <article class="shop" v-for="shop in nearbyShops">
+        <article class="shop" v-for="shop in nearbyShops">
            <img :src="shop.img" class="shop__img" />
            <span class="shop__name">{{ shop.name }}</span>
            <span class="shop__distance">{{ shop.distance }}</span>
            <address class="shop__address">{{ shop.street }}</address>
            <!-- Link to navigation -->
-       </article>
+        </article>
    </div>
 </template>
 
@@ -24,6 +24,10 @@ export default
         {
             return this.$store.getters.nearbyShops;
         },
+    },
+    methods:
+    {
+
     },
 };
 </script>
