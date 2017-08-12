@@ -56,9 +56,9 @@ export default
     },
     methods:
     {
-        setSearchLocatonFieldVisibility ()
+        flipSearchLocatonFieldVisibility ()
         {
-            Store.dispatch('setSearchLocatonFieldVisibility');
+            Store.dispatch('flipSearchLocatonFieldVisibility');
         },
     },
 };

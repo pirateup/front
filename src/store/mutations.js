@@ -4,7 +4,7 @@ export default
     {
         state.location = [value.latitude, value.longitude];
     },
-    setSearchLocatonFieldVisibility (state)
+    flipSearchLocatonFieldVisibility (state)
     {
         state.searchLocationFieldVisib = !state.searchLocationFieldVisib;
     },

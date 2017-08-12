@@ -10,6 +10,7 @@
 
 <script>
 import Store from '../store/store';
+// this.$store
 
 export default
 {
@@ -34,3 +35,4 @@ export default
 <style scoped>
 
 </style>
+
