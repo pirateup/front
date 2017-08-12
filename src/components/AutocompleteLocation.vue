@@ -9,8 +9,6 @@
 </template>
 
 <script>
-import Store from '../store/store';
-// this.$store
 
 export default
 {
@@ -22,7 +20,7 @@ export default
             if (e.geometry.viewport)
             {
                 const location = e.geometry.viewport;
-                Store.dispatch('placeChange', location);
+                this.$store.dispatch('placeChange', location);
             }
         },
     },
@@ -30,9 +28,9 @@ export default
     {
     },
 };
+
 </script>
 
 <style scoped>
 
 </style>
-

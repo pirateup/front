@@ -1,5 +1,5 @@
 // import utility functions
-import calculateMiddleformCoords from '../utility/calculateMiddleformCoords';
+import calculateMiddlefromCoords from '../utility/calculateMiddlefromCoords';
 
 export default
 {
@@ -16,7 +16,7 @@ export default
     },
     placeChange (context, location)
     {
-        const value = calculateMiddleformCoords(location);
+        const value = calculateMiddlefromCoords(location);
         context.commit({
             type: 'setLocation',
             value,
