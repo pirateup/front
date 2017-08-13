@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Hello from '@/components/Hello';
 import NearbyShops from '@/components/NearbyShops';
 
 Vue.use(Router);
@@ -11,8 +10,8 @@ export default new Router({
     [
         {
             path: '/',
-            name: 'Hello',
-            component: Hello,
+            name: 'NearbyShops',
+            component: NearbyShops,
         },
         {
             path: '/nearby-shops',
