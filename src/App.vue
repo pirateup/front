@@ -10,7 +10,6 @@
   </div>
 </template>
 <script>
-import Store from './store/store';
 
 export default
 {
@@ -23,7 +22,7 @@ export default
         {
             navigator.geolocation.getCurrentPosition(position =>
             {
-                Store.dispatch('setLocation', position.coords);
+                this.$store.dispatch('setLocation', position.coords);
             });
         }
     },
