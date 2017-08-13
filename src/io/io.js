@@ -19,5 +19,5 @@ export function requestNearbyShops (location)
 
 export function registerShop (shopData)
 {
-    return HTTP.post('shop', shopData);
+    return HTTP.post('shops', shopData);
 }
