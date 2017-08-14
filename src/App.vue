@@ -14,18 +14,6 @@
 export default
 {
     name: 'app',
-    created: () =>
-    {
-        // todo:
-        // to be refactored => shall move to action
-        if (navigator.geolocation)
-        {
-            navigator.geolocation.getCurrentPosition(position =>
-            {
-                this.$store.dispatch('setLocation', position.coords);
-            });
-        }
-    },
 };
 </script>
 
