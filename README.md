@@ -36,4 +36,6 @@ Specified as envariomental variable in ```./config/dev.env.js```
 
 Specified as envariomental variable in ```./config/prod.env.js```
 
+> Styleguide is located in ```./docs/stylguide.md```
+
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
