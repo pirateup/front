@@ -41,6 +41,7 @@ module.exports =
         "indent": ["error", 4],
         "no-unused-vars": [1],
         "no-console": ["warn"],
+        "no-plusplus": 0,
         "no-trailing-spaces": [1],
         'brace-style': ["error", "allman", { "allowSingleLine": true }],
         "space-before-function-paren": ["error","always"],
