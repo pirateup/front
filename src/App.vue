@@ -14,7 +14,6 @@
         <li><router-link to="/map">Show Map</router-link></li>
         <li><router-link to="/nearby-shops">Nearby shops</router-link></li>
     </ul>
-    <div>Your coords: {{location}}</div>
     <router-view></router-view>
   </div>
 </template>
@@ -51,10 +50,6 @@ export default
     },
     computed:
     {
-        location ()
-        {
-            return this.$store.getters.location;
-        },
     },
     methods:
     {

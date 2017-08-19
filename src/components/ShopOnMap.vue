@@ -1,6 +1,5 @@
 <template>
     <div class="columns">
-        <h3 v-if='lat' >User location coords: lat:{{lat}} lng:{{lng}}</h3>
         <div></div>
         <gmap-map
             :center='shopCoords'
@@ -34,14 +33,6 @@ export default
     },
     computed:
     {
-        lat ()
-        {
-            return this.$store.getters.location[0];
-        },
-        lng ()
-        {
-            return this.$store.getters.location[1];
-        },
         zoom ()
         {
             return this.$store.getters.zoom;

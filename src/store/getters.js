@@ -4,18 +4,6 @@ export default
     {
         return state.nearbyShops;
     },
-    location (state)
-    {
-        return state.location;
-    },
-    geoloc (state)
-    {
-        return state.geoloc;
-    },
-    wantSearchLocation (state)
-    {
-        return state.wantSearchLocation;
-    },
     shopCoords (state)
     {
         return id =>
@@ -37,9 +25,5 @@ export default
 
         // this is only temporrary
         return 15;
-    },
-    searchLocationFieldVisib (state)
-    {
-        return state.searchLocationFieldVisib;
     },
 };
