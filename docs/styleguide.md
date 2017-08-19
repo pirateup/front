@@ -17,9 +17,9 @@ Resources:
 
 ### Linter disclaimer
 
+We're starting off from airbnb preset
 All explicit linter rules are defined in ```.eslintrc.js```
-<!-- explanation is in comments -->
-<!-- contact us if you think they're dumb -->
+Every explicit rule contains an explenation on why it was set
 
 ### Abbreviation in variable/parameter names
 
