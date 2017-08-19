@@ -1,6 +1,4 @@
 <template>
-    <div class="columns">
-        <div></div>
         <gmap-map
             :center='shopCoords'
             :zoom='zoom'
@@ -15,7 +13,6 @@
             >
             </gmap-marker>
         </gmap-map>
-    </div>
 </template>
 
 <script>

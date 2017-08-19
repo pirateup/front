@@ -2,6 +2,6 @@ export default
 {
     setLocation (state, { value })
     {
-        state.location = { latitude: value.latitudeMidPoint, longitude: value.longitudeMidPoint };
+        state.location = { latitude: value.latitude, longitude: value.longitude };
     },
 };

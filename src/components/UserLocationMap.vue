@@ -1,9 +1,7 @@
 <template>
-    <div class="columns">
         <gmap-map :center='userLocation' :zoom='zoom' class='map_user'>
             <gmap-marker key="" :position="userLocation" clickable="true" draggable="false" @click="placeClicked" />
         </gmap-map>
-    </div>
 </template>
 
 <script>
