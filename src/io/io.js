@@ -12,9 +12,12 @@ HTTP.interceptors.response.use(
     error => Promise.reject(error), // "rethrows" error
 );
 
-// Remove this and below line after adding another function to the io
-/* eslint-disable */
 export function requestNearbyShops (location)
 {
     return HTTP.get(`nearby?latitude=${location.latitude}&longitude=${location.longitude}`);
+}
+
+export function registerShop (shopData)
+{
+    return HTTP.post('shops', shopData);
 }

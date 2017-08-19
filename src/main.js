@@ -13,4 +13,16 @@ new Vue({
     store,
     template: '<App/>',
     components: { App },
+    created ()
+    {
+        // to be refactored => shall move to action
+        // is this to be called here?
+        if (navigator.geolocation)
+        {
+            navigator.geolocation.getCurrentPosition(position =>
+            {
+                this.$store.dispatch('setLocation', position.coords);
+            });
+        }
+    },
 });
