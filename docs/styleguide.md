@@ -9,7 +9,7 @@ Initially everything should be written as a smart component and then moved to st
 Good usage of smart component: registration data input models
 
 Resources:
-- [0](https://forum.vuejs.org/t/vuex-distinction-between-data-store-and-ui-state-store/6748/4)
+- [Forum discussion](https://forum.vuejs.org/t/vuex-distinction-between-data-store-and-ui-state-store/6748/4)
 
 ### Custom wrappers for 3rd party libraries
 
@@ -24,12 +24,14 @@ All explicit linter rules are defined in ```.eslintrc.js```
 ### Abbreviation in variable/parameter names
 
 No abbrevitation shall exist. "event" is much more readable than "e".
+Exception is made for technology names, eg. HTTP
 
 Good example:
 
 ```js
     eventHandler(event)
     {
+        const HTTP = ...
         // some code
     }
 ```
@@ -39,6 +41,7 @@ Bad example:
 ```js
     eventHandler(e)
     {
+        const HyperTextTransferProtocol = ...
         // some code
     }
 ```
