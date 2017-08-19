@@ -1,7 +1,7 @@
 <template>
   <div id="app" class='container' >
     <div>
-        <img src='./assets/search.png' v-on:click='setSearchLocatonFieldVisibility'/>
+        <img src='./assets/search.png' v-on:click='flipSearchLocatonFieldVisibility'/>
         <div v-if='searchLocationFieldVisib'>
             <AutocompleteLocation />
         </div>
@@ -43,12 +43,14 @@ export default
             Store.dispatch('setLocation', { latitude: 52, longitude: -0.12 });
         }
     },
+    data ()
+    {
+        return {
+            searchLocationFieldVisib: false,
+        };
+    },
     computed:
     {
-        searchLocationFieldVisib ()
-        {
-            return this.$store.getters.searchLocationFieldVisib;
-        },
         location ()
         {
             return this.$store.getters.location;
@@ -58,7 +60,7 @@ export default
     {
         flipSearchLocatonFieldVisibility ()
         {
-            Store.dispatch('flipSearchLocatonFieldVisibility');
+            this.searchLocationFieldVisib = !this.searchLocationFieldVisib;
         },
     },
 };

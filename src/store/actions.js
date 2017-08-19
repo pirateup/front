@@ -10,10 +10,6 @@ export default
             value,
         });
     },
-    setSearchLocatonFieldVisibility (context)
-    {
-        context.commit('setSearchLocatonFieldVisibility');
-    },
     placeChange (context, location)
     {
         const value = calculateMiddlefromCoords(location);
