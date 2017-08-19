@@ -13,6 +13,8 @@ Resources:
 
 ### Custom wrappers for 3rd party libraries
 
+All 3rd party libraries should be wrapped to seperate their API from our application code
+
 ## JS
 
 ### Linter disclaimer
