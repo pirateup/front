@@ -15,12 +15,23 @@ export default
     name: 'autocomplete-location',
     methods:
     {
-        placeChange (e)
+        placeChange (event)
         {
-            if (e.geometry.viewport)
+            if (event.geometry.viewport)
             {
-                const location = e.geometry.viewport;
-                this.$store.dispatch('placeChange', location);
+// this calculation is needed as google is returning segment object not coords object
+                const locationCalculatorFromGoogleObject = locationSegmet =>
+                {
+                    const latitudeBegining = locationSegmet.f.b + locationSegmet.f.f;
+                    const longitudeBegining = locationSegmet.b.b + locationSegmet.b.f;
+                    const latitudeMidPoint = latitudeBegining / 2;
+                    const longitudeMidPoint = longitudeBegining / 2;
+                    return {
+                        latitudeMidPoint,
+                        longitudeMidPoint,
+                    };
+                };
+                this.$store.dispatch('placeChange', locationCalculatorFromGoogleObject(event.geometry.viewport));
             }
         },
     },

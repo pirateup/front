@@ -1,6 +1,3 @@
-// import utility functions
-import calculateMiddlefromCoords from '../utility/calculateMiddlefromCoords';
-
 export default
 {
     setLocation (context, value)
@@ -10,9 +7,9 @@ export default
             value,
         });
     },
-    placeChange (context, location)
+    placeChange (context, value)
     {
-        const value = calculateMiddlefromCoords(location);
+        console.log(value);
         context.commit({
             type: 'setLocation',
             value,
