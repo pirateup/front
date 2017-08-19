@@ -21,4 +21,24 @@ All explicit linter rules are defined in ```.eslintrc.js```
 <!-- explanation is in comments -->
 <!-- contact us if you think they're dumb -->
 
-### Abbreviation in variable names
+### Abbreviation in variable/parameter names
+
+No abbrevitation shall exist. "event" is much more readable than "e".
+
+Good example:
+
+```js
+    eventHandler(event)
+    {
+        // some code
+    }
+```
+
+Bad example:
+
+```js
+    eventHandler(e)
+    {
+        // some code
+    }
+```
