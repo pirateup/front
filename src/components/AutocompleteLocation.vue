@@ -8,6 +8,31 @@
 
 <script>
 
+/*
+    Google represents a point as two sections
+    We represent a point by longitude and latitude
+    Intersection (which happens in the middle of each)
+    of thoose sections gives a point in desired notation
+*/
+function GmapObjectToLocation (GmapObject)
+{
+    const latitudeBegin = GmapObject.f.b;
+    const latitudeEnd = GmapObject.f.f;
+
+    const longitudeBegin = GmapObject.b.b;
+    const longitudeEnd = GmapObject.b.f;
+
+    const latitudeMidPoint = (latitudeBegin + latitudeEnd) / 2;
+    const longitudeMidPoint = (longitudeBegin + longitudeEnd) / 2;
+
+    const location = {
+        latitude: latitudeMidPoint,
+        longitude: longitudeMidPoint,
+    };
+
+    return location;
+}
+
 export default
 {
     name: 'autocomplete-location',
@@ -17,19 +42,10 @@ export default
         {
             if (event.geometry.viewport)
             {
-// this calculation is needed as google is returning segment of coords object not coords object
-                const locationCalculatorFromGoogleObject = locationSegmet =>
-                {
-                    const latitudeSegment = locationSegmet.f.b + locationSegmet.f.f;
-                    const longitudeSegment = locationSegmet.b.b + locationSegmet.b.f;
-                    const latitudeMidPoint = latitudeSegment / 2;
-                    const longitudeMidPoint = longitudeSegment / 2;
-                    return {
-                        latitude: latitudeMidPoint,
-                        longitude: longitudeMidPoint,
-                    };
-                };
-                this.$store.dispatch('placeChange', locationCalculatorFromGoogleObject(event.geometry.viewport));
+                const GmapObject = event.geometry.viewport;
+                const location = GmapObjectToLocation(GmapObject);
+
+                this.$store.dispatch('placeChange', location);
             }
         },
     },
