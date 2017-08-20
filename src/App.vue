@@ -1,9 +1,9 @@
 <template>
   <div id="app" class='container' >
     <div>
-        <img src='./assets/search.png' v-on:click='flipSearchLocatonFieldVisibility'/>
+        <img src='./assets/setLocation.png' v-on:click='flipSearchLocatonFieldVisibility'/>
         <div v-if='searchLocationFieldVisib'>
-            <AutocompleteLocation />
+            <ManualLocationSetter />
         </div>
     </div>
     <div>
@@ -19,12 +19,12 @@
 </template>
 <script>
 import Store from './store/store';
-import AutocompleteLocation from './components/AutocompleteLocation';
+import ManualLocationSetter from './components/ManualLocationSetter';
 
 export default
 {
     name: 'app',
-    components: { AutocompleteLocation },
+    components: { ManualLocationSetter },
     created: () =>
     {
         // todo:
