@@ -13,35 +13,19 @@
         <li><router-link to="/">Homepage</router-link></li>
         <li><router-link to="/map">Show Map</router-link></li>
         <li><router-link to="/nearby-shops">Nearby shops</router-link></li>
+        <li><router-link to="/register-shop">Register shop</router-link></li>
     </ul>
     <router-view></router-view>
   </div>
 </template>
 <script>
-import Store from './store/store';
 import ManualLocationSetter from './components/ManualLocationSetter';
+
 
 export default
 {
     name: 'app',
     components: { ManualLocationSetter },
-    created: () =>
-    {
-        // todo:
-        // to be refactored => shall move to action
-        if (navigator.geolocation)
-        {
-            navigator.geolocation.getCurrentPosition(position =>
-            {
-                Store.dispatch('setLocation', position.coords);
-            });
-        }
-        else
-        {
-            // setting to central London
-            Store.dispatch('setLocation', { latitude: 52, longitude: -0.12 });
-        }
-    },
     data ()
     {
         return {

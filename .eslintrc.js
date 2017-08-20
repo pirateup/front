@@ -35,6 +35,7 @@ module.exports = {
     'generator-star-spacing': 0,
     "indent": ["error", 4],
     "no-unused-vars": [1],
+    "no-console": ["warn"],
     "no-trailing-spaces": [1],
     'brace-style': ["error", "allman", { "allowSingleLine": true }],
     "space-before-function-paren": ["error","always"],

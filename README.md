@@ -18,4 +18,28 @@ npm run build
 npm run build --report
 ```
 
+## Backend connection
+
+### Dev (mocked backend)
+
+```sh
+
+    npm run mock-back
+```
+
+All mocked data are randomly created via ```./config/mock-api-data.js```.     
+Mock server runs on port 3000   
+
+Resource manifest is generated upon starting
+
+### Dev
+
+Specified as envariomental variable in ```./config/dev.env.js```
+
+### Production
+
+Specified as envariomental variable in ```./config/prod.env.js```
+
+---
+
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
