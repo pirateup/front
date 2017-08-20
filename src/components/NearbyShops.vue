@@ -5,12 +5,13 @@
            <span class="shop__name">{{ shop.name }}</span>
            <span class="shop__distance">{{ shop.distance }}</span>
            <address class="shop__address">{{ shop.street }}</address>
-           <!-- Link to navigation -->
-        </article>
-   </div>
+           <router-link :to='{path: `/shop-on-map/${shop.id}`}'>View on map</router-link>
+       </article>
+   	</div>
 </template>
 
 <script>
+
 export default
 {
     name: 'nearby-shops',

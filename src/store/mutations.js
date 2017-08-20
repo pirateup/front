@@ -2,6 +2,10 @@ export default
 {
     setLocation (state, { location: { latitude, longitude } })
     {
+        // from G_maps branch -> if something doesn't work test this
+        // if all works please delete
+        //state.location = { latitude: value.latitude, longitude: value.longitude };
+
         // Parameter destructing in order to allow raw output from geolocatin API
         state.location = { latitude, longitude };
     },
