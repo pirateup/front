@@ -30,8 +30,8 @@ export default new Router({
             path: '/map',
             name: 'user-location-map',
             component: UserLocationMap,
-		},
-		{
+        },
+        {
             path: '/register-shop',
             name: 'RegisterShop',
             component: RegisterShop,
