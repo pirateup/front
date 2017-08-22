@@ -1,11 +1,12 @@
 <template>
     <div class="search-by-name">
-        <span>Testing test</span>
+        <input type="text" v-model="query" v-on:input="showSearchResults()">
         <shop-list :shops="shops" />
    </div>
 </template>
 
 <script>
+import { requestSearchByName } from '@/io/io';
 import ShopList from '@/components/ShopList';
 
 export default
@@ -14,12 +15,22 @@ export default
     data ()
     {
         return {
-
+            query: '',
+            shops: [],
         };
     },
-    computed:
+    methods:
     {
-
+        showSearchResults ()
+        {
+            requestSearchByName(this.query)
+            .then(result =>
+            {
+                this.shops = result;
+            })
+            // todo: handle this better somehow
+            .catch(sth => sth);
+        },
     },
     components:
     {
@@ -30,5 +41,9 @@ export default
 
 <style scoped>
 
+input
+{
+    display: block;
+}
 
 </style>
