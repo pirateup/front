@@ -1,10 +1,12 @@
 <template>
     <div class="search-by-name">
         <span>Testing test</span>
+        <shop-list :shops="shops" />
    </div>
 </template>
 
 <script>
+import ShopList from '@/components/ShopList';
 
 export default
 {
@@ -19,9 +21,9 @@ export default
     {
 
     },
-    methods:
+    components:
     {
-
+        ShopList,
     },
 };
 </script>
