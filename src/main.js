@@ -31,6 +31,13 @@ new Vue({
         {
             navigator.geolocation.getCurrentPosition(position =>
             {
+                /* TO DO: works correctly, there is an property in 
+                location object named accuracy:
+                Coordinates { latitude: 52.25, longitude: 21, altitude: 0, accuracy: 25000, altitudeAccuracy: 0, heading: NaN, speed: NaN }
+                I propose to take in to account in the future setting of 
+                user localization to avoid setting it to far from desired
+                user searching position.
+                */ 
                 console.log(position.coords);
                 this.$store.dispatch('setLocation', position.coords);
             });
