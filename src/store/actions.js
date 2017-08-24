@@ -24,11 +24,4 @@ export default
             });
         });
     },
-    placeChange (context, value)
-    {
-        context.commit({
-            type: 'setLocation',
-            value,
-        });
-    },
 };

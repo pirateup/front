@@ -31,6 +31,7 @@ new Vue({
         {
             navigator.geolocation.getCurrentPosition(position =>
             {
+                console.log(position.coords);
                 this.$store.dispatch('setLocation', position.coords);
             });
         }
