@@ -12,7 +12,9 @@ export default
     },
     userLocation (state)
     {
-        return { lat: state.location.latitude, lng: state.location.longitude };
+        // for reference while refactoring
+        // return { lat: state.location.latitude, lng: state.location.longitude };
+        return state.location;
     },
     zoom ()
     {

@@ -15,7 +15,7 @@ export default
     updateNearbyShops (context)
     {
         // TODO: Some kind of guard to prevent sending a request every second
-        io.requestNearbyShops(context.getters.location)
+        io.requestNearbyShops(context.getters.userLocation)
         .then(shops =>
         {
             context.commit({
