@@ -27,6 +27,7 @@ new Vue({
     {
         // to be refactored => shall move to action
         // is this to be called here?
+        // Add a feature detection library
         if (navigator.geolocation)
         {
             navigator.geolocation.getCurrentPosition(position =>
