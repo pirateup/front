@@ -30,6 +30,7 @@ module.exports = () =>
             street: faker.address.streetName(),
             // randomize prop is just a junk that enforces a different image per object
             img: `http://lorempixel.com/400/400/?randomize=${i}`,
+            location: [Number(faker.address.latitude()), Number(faker.address.longitude())],
         });
     }
 

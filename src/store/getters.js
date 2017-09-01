@@ -7,8 +7,10 @@ export default
     shopCoords (state)
     {
         return id =>
-        ({ lat: state.nearbyShops.find(shop => shop.id === id).location[0],
-            lng: state.nearbyShops.find(shop => shop.id === id).location[1] });
+        ({
+            lat: state.nearbyShops.find(shop => shop.id === Number(id)).location[0],
+            lng: state.nearbyShops.find(shop => shop.id === Number(id)).location[1],
+        });
     },
     userLocation (state)
     {
