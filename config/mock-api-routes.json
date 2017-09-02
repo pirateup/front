@@ -1,4 +1,4 @@
 {
-  "/shop\\?name=:name": "/nearby?name_like=:name",
-  "/shop\\?tag=:tag": "/nearby?tag_like=:tag"
+  "/shop\\?name=:name": "/shops?name_like=:name",
+  "/shop\\?tag=:tag": "/shops?tag_like=:tag"
 }
