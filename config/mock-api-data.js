@@ -11,23 +11,26 @@ function * range (max)
     return max;
 }
 
-function setTagName ()
-{
-    const tagsArray = [
-        'florist',
-        'grocery',
-        'pharmacy',
-        'newsstand',
-        'butcher',
-        'bakery',
-        'cafe',
-        'coffeshop',
-        'clothes',
-        'furnishings',
-    ];
+// ************************
+// Helper resources
+// *************************
 
-    return tagsArray[faker.random.number({ min: 0, max: (tagsArray.length - 1) })];
-}
+const tagsArray = [
+    'florist',
+    'grocery',
+    'pharmacy',
+    'newsstand',
+    'butcher',
+    'bakery',
+    'cafe',
+    'coffeshop',
+    'clothes',
+    'furnishings',
+];
+
+// ************************
+// Main
+// *************************
 
 module.exports = () =>
 {
@@ -49,7 +52,7 @@ module.exports = () =>
             // randomize prop is just a junk that enforces a different image per object
             img: `http://lorempixel.com/400/400/?randomize=${i}`,
             location: [Number(faker.address.latitude()), Number(faker.address.longitude())],
-            tag: setTagName(),
+            tag: faker.random.arrayElement(tagsArray),
         });
     }
 
