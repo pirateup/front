@@ -12,7 +12,7 @@
     Google represents a point as two sections
     We represent a point by longitude and latitude
     Intersection (which happens in the middle of each)
-    of thoose sections gives a point in desired notation
+    of those sections gives a point in desired notation
 */
 function GmapObjectToLocation (GmapObject)
 {
@@ -45,7 +45,7 @@ export default
                 const GmapObject = event.geometry.viewport;
                 const location = GmapObjectToLocation(GmapObject);
 
-                this.$store.dispatch('placeChange', location);
+                this.$store.dispatch('setLocation', location);
             }
         },
     },

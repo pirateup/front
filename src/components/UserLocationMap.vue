@@ -18,7 +18,9 @@ export default
     {
         userLocation ()
         {
-            return this.$store.getters.userLocation;
+            const { latitude, longitude } = this.$store.getters.userLocation;
+
+            return { lat: latitude, lng: longitude };
         },
         zoom ()
         {
