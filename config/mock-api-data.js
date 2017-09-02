@@ -26,9 +26,7 @@ function setTagName ()
         'furnishings',
     ];
 
-    const randomNumber = () => Math.floor(Math.random() * tagsArray.length);
-
-    return tagsArray[randomNumber()];
+    return tagsArray[faker.random.number({ min: 0, max: (tagsArray.length - 1) })];
 }
 
 module.exports = () =>
