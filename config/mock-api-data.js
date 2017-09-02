@@ -11,6 +11,26 @@ function * range (max)
     return max;
 }
 
+function setTagName () {
+    
+    const tagsArray = [
+        'florist',
+        'grocery',
+        'pharmacy',
+        'newsstand',
+        'butcher',
+        'bakery',
+        'cafe',
+        'coffeshop',
+        'clothes',
+        'furnishings'
+    ];
+
+    const randomNumber = () => Math.floor(Math.random() * tagsArray.length); 
+    
+    return tagsArray[randomNumber()];
+}
+
 module.exports = () =>
 {
     // register empty resources
@@ -21,7 +41,7 @@ module.exports = () =>
 
     // populate them with random stuff if needed
     // eslint-disable-next-line
-    for (let i of range(10))
+    for (let i of range(50))
     {
         data.nearby.push({
             id: i,
@@ -31,6 +51,7 @@ module.exports = () =>
             // randomize prop is just a junk that enforces a different image per object
             img: `http://lorempixel.com/400/400/?randomize=${i}`,
             location: [Number(faker.address.latitude()), Number(faker.address.longitude())],
+            tags: setTagName(),
         });
     }
 
