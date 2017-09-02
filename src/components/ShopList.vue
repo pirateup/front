@@ -6,6 +6,7 @@
            <span class="shop__distance">{{ shop.distance }}</span>
            <address class="shop__address">{{ shop.street }}</address>
            <router-link :to='{path: `/shop-on-map/${shop.id}`}'>View on map</router-link>
+           <p class='shop__tag'>{{ shop.tag }}</p>
        </article>
     </div>
 </template>
