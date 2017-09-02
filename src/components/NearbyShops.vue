@@ -1,16 +1,9 @@
 <template>
-    <div class="shops-list">
-        <article class="shop" v-for="shop in nearbyShops">
-           <img :src="shop.img" class="shop__img" />
-           <span class="shop__name">{{ shop.name }}</span>
-           <span class="shop__distance">{{ shop.distance }}</span>
-           <address class="shop__address">{{ shop.street }}</address>
-           <router-link :to='{path: `/shop-on-map/${shop.id}`}'>View on map</router-link>
-       </article>
-   	</div>
+    <shop-list :shops="nearbyShops" />
 </template>
 
 <script>
+import ShopList from '@/components/ShopList';
 
 export default
 {
@@ -26,9 +19,9 @@ export default
             return this.$store.getters.nearbyShops;
         },
     },
-    methods:
+    components:
     {
-
+        ShopList,
     },
 };
 </script>
