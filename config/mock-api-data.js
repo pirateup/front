@@ -11,8 +11,8 @@ function * range (max)
     return max;
 }
 
-function setTagName () {
-    
+function setTagName ()
+{
     const tagsArray = [
         'florist',
         'grocery',
@@ -23,11 +23,11 @@ function setTagName () {
         'cafe',
         'coffeshop',
         'clothes',
-        'furnishings'
+        'furnishings',
     ];
 
-    const randomNumber = () => Math.floor(Math.random() * tagsArray.length); 
-    
+    const randomNumber = () => Math.floor(Math.random() * tagsArray.length);
+
     return tagsArray[randomNumber()];
 }
 
