@@ -5,6 +5,7 @@ import NearbyShops from '@/components/NearbyShops';
 import ShopOnMap from '@/components/ShopOnMap';
 import UserLocationMap from '@/components/UserLocationMap';
 import RegisterShop from '@/components/RegisterShop';
+import SearchShopByName from '@/components/SearchShopByName';
 
 Vue.use(Router);
 
@@ -35,6 +36,11 @@ export default new Router({
             path: '/register-shop',
             name: 'RegisterShop',
             component: RegisterShop,
+        },
+        {
+            path: '/search-shop-by-name',
+            name: 'SearchShopByName',
+            component: SearchShopByName,
         },
     ],
 });

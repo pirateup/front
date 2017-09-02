@@ -21,3 +21,8 @@ export function registerShop (shopData)
 {
     return HTTP.post('shops', shopData);
 }
+
+export function requestSearchByName (name)
+{
+    return HTTP.get(`shop?name=${name}`);
+}

@@ -14,6 +14,7 @@
         <li><router-link to="/map">Show Map</router-link></li>
         <li><router-link to="/nearby-shops">Nearby shops</router-link></li>
         <li><router-link to="/register-shop">Register shop</router-link></li>
+        <li><router-link to="/search-shop-by-name">Search shop by name</router-link></li>
     </ul>
     <router-view></router-view>
   </div>
