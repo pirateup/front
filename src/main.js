@@ -43,5 +43,6 @@ new Vue({
                 this.$store.dispatch('setLocation', position.coords);
             });
         }
+        this.$store.dispatch('setShopTags');
     },
 });

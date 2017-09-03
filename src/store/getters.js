@@ -30,4 +30,8 @@ export default
         // this is only temporary
         return 15;
     },
+    tags (state)
+    {
+        return state.tags;
+    },
 };

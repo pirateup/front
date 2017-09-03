@@ -6,6 +6,7 @@ import ShopOnMap from '@/components/ShopOnMap';
 import UserLocationMap from '@/components/UserLocationMap';
 import RegisterShop from '@/components/RegisterShop';
 import SearchShopByName from '@/components/SearchShopByName';
+import SearchShopByTag from '@/components/SearchShopByTag';
 
 Vue.use(Router);
 
@@ -41,6 +42,11 @@ export default new Router({
             path: '/search-shop-by-name',
             name: 'SearchShopByName',
             component: SearchShopByName,
+        },
+        {
+            path: '/search-shop-by-tag',
+            name: 'SearchShopByTag',
+            component: SearchShopByTag,
         },
     ],
 });
