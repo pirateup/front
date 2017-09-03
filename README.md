@@ -1,6 +1,7 @@
 # pirateup-front
 
-> Front for our marvelous app
+[![Foo](https://david-dm.org/pirateup/front/status.svg)](https://david-dm.org/pirateup/front)
+[![Foo](https://david-dm.org/pirateup/front/dev-status.svg)](https://david-dm.org/pirateup/front?type=dev)
 
 ## Build Setup
 
