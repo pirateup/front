@@ -32,7 +32,6 @@ export default
     },
     created ()
     {
-        console.log('aaa');
     },
     methods:
     {
