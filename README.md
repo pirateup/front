@@ -1,7 +1,7 @@
 # pirateup-front
 
-[![Foo](https://david-dm.org/pirateup/front/status.svg)](https://david-dm.org/pirateup/front)
-[![Foo](https://david-dm.org/pirateup/front/dev-status.svg)](https://david-dm.org/pirateup/front?type=dev)
+[![Dependency Status](https://gemnasium.com/badges/github.com/pirateup/front.svg)](https://gemnasium.com/github.com/pirateup/front)
+[![Dev-dependency Status](https://david-dm.org/pirateup/front/dev-status.svg)](https://david-dm.org/pirateup/front?type=dev)
 
 ## Build Setup
 
