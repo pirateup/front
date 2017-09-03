@@ -30,13 +30,9 @@ module.exports = () =>
             'cafe',
             'coffeshop',
             'clothes',
-            'furnishings'
+            'furnishings',
         ],
     };
-
-    const randomizeTag = () => {
-        return Math.floor(Math.random() * data.tags.length) 
-    }
 
     // populate them with random stuff if needed
     // eslint-disable-next-line
@@ -50,7 +46,7 @@ module.exports = () =>
             // randomize prop is just a junk that enforces a different image per object
             img: `http://lorempixel.com/400/400/?randomize=${i}`,
             location: [Number(faker.address.latitude()), Number(faker.address.longitude())],
-            tag: data.tags[randomizeTag()],
+            tag: faker.random.arrayElement(data.tags),
         });
     }
 
