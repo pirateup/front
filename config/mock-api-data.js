@@ -11,33 +11,29 @@ function * range (max)
     return max;
 }
 
-function setTagName () {
-    
-    const tagsArray = [
-        'florist',
-        'grocery',
-        'pharmacy',
-        'newsstand',
-        'butcher',
-        'bakery',
-        'cafe',
-        'coffeshop',
-        'clothes',
-        'furnishings'
-    ];
-
-    const randomNumber = () => Math.floor(Math.random() * tagsArray.length); 
-    
-    return tagsArray[randomNumber()];
-}
-
 module.exports = () =>
 {
     // register empty resources
     const data = {
         nearby: [],
         shops: [],
+        tags: [
+            'florist',
+            'grocery',
+            'pharmacy',
+            'newsstand',
+            'butcher',
+            'bakery',
+            'cafe',
+            'coffeshop',
+            'clothes',
+            'furnishings'
+        ],
     };
+
+    const randomizeTag = () => {
+        return Math.floor(Math.random() * data.tags.length) 
+    }
 
     // populate them with random stuff if needed
     // eslint-disable-next-line
@@ -51,7 +47,7 @@ module.exports = () =>
             // randomize prop is just a junk that enforces a different image per object
             img: `http://lorempixel.com/400/400/?randomize=${i}`,
             location: [Number(faker.address.latitude()), Number(faker.address.longitude())],
-            tag: setTagName(),
+            tag: data.tags[randomizeTag()],
         });
     }
 

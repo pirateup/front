@@ -1,7 +1,8 @@
 <template>
     <div class="search-by-tag">
-        <select v-on:change="showSearchResults($event)">
-            <option v-for="tag in tags" :value='tag'>{{ tag }}</option>
+        <select v-model='selected' v-on:change="showSearchResults()">
+            <option disabled value=''>Please select shop type</option>
+            <option v-for="tag in tags" v-bind:value='tag'>{{ tag }}</option>
         </select>
         <shop-list :shops="shops" />
    </div>
@@ -19,29 +20,25 @@ export default
         return {
             query: '',
             shops: [],
-            // TODO:
-            // tagsArray:
-            // hard coded for basic implementation
-            // set to be fetched from server
-            tags: [
-                'florist',
-                'grocery',
-                'pharmacy',
-                'newsstand',
-                'butcher',
-                'bakery',
-                'cafe',
-                'coffeshop',
-                'clothes',
-                'furnishings',
-            ],
+            selected: '',
         };
+    },
+    computed:
+    {
+        tags ()
+        {
+            return this.$store.getters.tags;
+        },
+    },
+    created ()
+    {
+        console.log('aaa');
     },
     methods:
     {
-        showSearchResults (event)
+        showSearchResults ()
         {
-            requestSearchByTag(event.target.value)
+            requestSearchByTag(this.selected)
             .then(result =>
             {
                 this.shops = result;

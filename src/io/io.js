@@ -31,3 +31,8 @@ export function requestSearchByTag (tag)
 {
     return HTTP.get(`shop?tag=${tag}`);
 }
+
+export function requestTags ()
+{
+    return HTTP.get('tags');
+}

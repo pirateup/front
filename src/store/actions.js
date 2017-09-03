@@ -24,4 +24,15 @@ export default
             });
         });
     },
+    setShopTags (context)
+    {
+        io.requestTags()
+        .then(tags =>
+        {
+            context.commit({
+                type: 'setShopTags',
+                tags,
+            });
+        });
+    },
 };
