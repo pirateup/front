@@ -1,5 +1,6 @@
 # pirateup-front
 
+[![codebeat badge](https://codebeat.co/badges/2572ce8d-8317-49c8-8461-cdc904ddb322)](https://codebeat.co/projects/github-com-pirateup-front-master)
 [![Dependency Status](https://gemnasium.com/badges/github.com/pirateup/front.svg)](https://gemnasium.com/github.com/pirateup/front)
 [![Dev-dependency Status](https://david-dm.org/pirateup/front/dev-status.svg)](https://david-dm.org/pirateup/front?type=dev)
 
