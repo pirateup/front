@@ -1,9 +1,10 @@
 # pirateup-front
 
 [![codebeat badge](https://codebeat.co/badges/2572ce8d-8317-49c8-8461-cdc904ddb322)](https://codebeat.co/projects/github-com-pirateup-front-master)
+[![BCH compliance](https://bettercodehub.com/edge/badge/pirateup/front?branch=master)](https://bettercodehub.com/)
+[![Known Vulnerabilities](https://snyk.io/test/github/pirateup/front/badge.svg)](https://snyk.io/test/github/pirateup/front)
 [![Dependency Status](https://gemnasium.com/badges/github.com/pirateup/front.svg)](https://gemnasium.com/github.com/pirateup/front)
 [![Dev-dependency Status](https://david-dm.org/pirateup/front/dev-status.svg)](https://david-dm.org/pirateup/front?type=dev)
-[![Known Vulnerabilities](https://snyk.io/test/github/pirateup/front/badge.svg)](https://snyk.io/test/github/pirateup/front)
 
 ## Build Setup
 
