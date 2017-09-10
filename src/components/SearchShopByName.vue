@@ -2,12 +2,14 @@
     <div class="search-by-name">
         <input type="text" v-model="query" v-on:input="showSearchResults()">
         <shop-list :shops="shops" />
+        <add-shop />
    </div>
 </template>
 
 <script>
 import { requestSearchByName } from '@/io/io';
 import ShopList from '@/components/ShopList';
+import AddShop from '@/components/AddShop';
 
 export default
 {
@@ -35,6 +37,7 @@ export default
     components:
     {
         ShopList,
+        AddShop,
     },
 };
 </script>

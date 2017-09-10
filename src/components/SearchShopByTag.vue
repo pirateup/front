@@ -5,12 +5,14 @@
             <option v-for="tag in tags" v-bind:value='tag'>{{ tag }}</option>
         </select>
         <shop-list :shops="shops" />
+        <add-shop />
    </div>
 </template>
 
 <script>
 import { requestSearchByTag } from '@/io/io';
 import ShopList from '@/components/ShopList';
+import AddShop from '@/components/AddShop';
 
 export default
 {
@@ -49,6 +51,7 @@ export default
     components:
     {
         ShopList,
+        AddShop,
     },
 };
 </script>
