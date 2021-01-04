@@ -12,7 +12,7 @@
     "mock-back": "./node_modules/json-server/bin/index.js --watch ./config/mock-api-data.js --routes ./config/mock-api-routes.json"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "vue": "^2.3.3",
     "vue-router": "^2.6.0",
     "vue2-google-maps": "^0.7.10",
